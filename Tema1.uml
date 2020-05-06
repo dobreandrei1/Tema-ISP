@@ -14,6 +14,33 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_1-qx4o9mEeqcbthO2bXlfg" name="order" type="_PfoqEHThEeqkF9IPJMqZ5A" association="_1-qK0I9mEeqcbthO2bXlfg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1-rY8Y9mEeqcbthO2bXlfg" value="*"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rIJJ4I-KEeqcbthO2bXlfg" name="addToCart">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rIJJ4Y-KEeqcbthO2bXlfg" name="ticket" type="_Y9HGkHTgEeqkF9IPJMqZ5A"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rIJJ4o-KEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rILmII-KEeqcbthO2bXlfg" name="isLoggedIn">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rILmIY-KEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rIM0QI-KEeqcbthO2bXlfg" name="getTotalMoneySpent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rIM0QY-KEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rIOCYI-KEeqcbthO2bXlfg" name="addOrder">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rIOCYY-KEeqcbthO2bXlfg" name="order" type="_PfoqEHThEeqkF9IPJMqZ5A"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rIOCYo-KEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rIP3kI-KEeqcbthO2bXlfg" name="isValidLogin">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rIP3kY-KEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_2S7mgHTfEeqkF9IPJMqZ5A" name="PersonalInfo">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_9gdkMHTfEeqkF9IPJMqZ5A" name="lastName">
@@ -57,6 +84,17 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tr3OYnTrEeqkF9IPJMqZ5A"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tr31cHTrEeqkF9IPJMqZ5A" value="*"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WuDO0I-LEeqcbthO2bXlfg" name="addTicketToCart">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WuDO0Y-LEeqcbthO2bXlfg" name="ticket" type="_Y9HGkHTgEeqkF9IPJMqZ5A"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WuDO0o-LEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_i8Yz8I-LEeqcbthO2bXlfg" name="isValid">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_i8Yz8Y-LEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_Tr2AQHTrEeqkF9IPJMqZ5A" memberEnd="_Tr3OYXTrEeqkF9IPJMqZ5A _Tr4cgHTrEeqkF9IPJMqZ5A">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Tr2nUHTrEeqkF9IPJMqZ5A" source="org.eclipse.papyrus">
@@ -69,6 +107,9 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2Ld2IHTrEeqkF9IPJMqZ5A" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ENe_YHTsEeqkF9IPJMqZ5A" name="provideFlights" concurrency="concurrent"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_oqu20I-LEeqcbthO2bXlfg" name="getSingletonInstance" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_twa-QI-LEeqcbthO2bXlfg" name="provider" type="_a5Wv0HTrEeqkF9IPJMqZ5A" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_jqyJMHTrEeqkF9IPJMqZ5A" name="Flight">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_uOEhwnTrEeqkF9IPJMqZ5A" name="ticket" type="_Y9HGkHTgEeqkF9IPJMqZ5A" aggregation="composite" association="_uOD6sHTrEeqkF9IPJMqZ5A">
@@ -92,6 +133,27 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="__ZhfkI9iEeqcbthO2bXlfg" name="numberOfSeats">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wCEGMI-KEeqcbthO2bXlfg" name="getTotalTicketsMoney">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_wCEGMY-KEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_9ZhPgI-KEeqcbthO2bXlfg" name="getTotalPriceForBusiness">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_9ZhPgY-KEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_AtfhsI-LEeqcbthO2bXlfg" name="addTicket">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AtfhsY-LEeqcbthO2bXlfg" name="ticket" type="_Y9HGkHTgEeqkF9IPJMqZ5A"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Atfhso-LEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FX9FsI-LEeqcbthO2bXlfg" name="hasValidSchedule">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_FX9FsY-LEeqcbthO2bXlfg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_uOD6sHTrEeqkF9IPJMqZ5A" memberEnd="_uOEhwnTrEeqkF9IPJMqZ5A _uOJaQHTrEeqkF9IPJMqZ5A">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uOEhwHTrEeqkF9IPJMqZ5A" source="org.eclipse.papyrus">
@@ -295,6 +357,12 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1-qx4Y9mEeqcbthO2bXlfg" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_1-rY8o9mEeqcbthO2bXlfg" name="account" type="_Dw_jkHTfEeqkF9IPJMqZ5A" association="_1-qK0I9mEeqcbthO2bXlfg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ga71wI-JEeqcbthO2bXlfg" name="FlightHelper">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_n4KcUI-JEeqcbthO2bXlfg" name="getAvailableFlights"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__vSCcI-JEeqcbthO2bXlfg" name="getSortedFlightsByDate"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__19SMI-JEeqcbthO2bXlfg" name="getFlightsOnBudget"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EAtbYI-KEeqcbthO2bXlfg" name="getSearchedFlights"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2qTaIHTeEeqkF9IPJMqZ5A">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2qVPUHTeEeqkF9IPJMqZ5A" source="http://www.eclipse.org/uml2/2.0.0/UML">

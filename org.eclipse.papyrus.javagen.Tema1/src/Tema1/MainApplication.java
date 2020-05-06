@@ -6,8 +6,6 @@ import java.util.List;
 public class MainApplication {
 	
 	public static List<Account> accounts = new ArrayList<Account>();
-	
-	
 
 	public static void main(String[] args) {		
 		
@@ -22,7 +20,7 @@ public class MainApplication {
 		
 		System.out.println((new Account("prea", "Asa").isValidLogin()));
 		
-		System.out.println(Provider.getInstance().provideFlights());
+		System.out.println(Provider.getSingletonInstance().provideFlights());
 		
 		
 	}
