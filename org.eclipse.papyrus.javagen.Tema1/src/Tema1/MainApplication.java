@@ -5,7 +5,6 @@ import java.util.List;
 
 public class MainApplication {
 	
-	public static List<Account> accounts = new ArrayList<Account>();
 
 	public static void main(String[] args) {		
 		
@@ -16,7 +15,7 @@ public class MainApplication {
 		bilete.add(new Ticket(ClassType.Economy, 2, 0.92));		
 		
 		 
-		MainApplication.accounts.add(new Account("Admin", "Admin"));
+		AccountDbMock.accounts.add(new Account("Admin", "Admin"));
 		
 		System.out.println((new Account("prea", "Asa").isValidLogin()));
 		

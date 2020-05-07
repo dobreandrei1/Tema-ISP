@@ -22,19 +22,40 @@ public class Account {
 	public boolean isLoggedIn = true;
 	
 	
+	public Account(String username, String password , PersonalInfo personalInfo) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.personalinfo = personalInfo;
+	}
+	
+	
 	public Account(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
 	}
 	
+	
 	public boolean isValidLogin() {
-		return 	MainApplication.accounts.stream()
+		return AccountDbMock.accounts.stream()
 				.filter(a -> a.username.equals(this.username) 
 						&& a.password.equals(this.password))
-				.collect(Collectors.toList()).size() == 0 ? false : true;
+				.collect(Collectors.toList()).size() == 0 ? true : false;
+		
 	}
 	
+	public void login() throws Exception {
+		if(this.isValidLogin()) {
+			this.isLoggedIn = true;
+			this.setFlightHelper(new FlightHelper());
+		}
+		else {
+			this.isLoggedIn = false;
+			throw new Exception("invalid credentials");
+		}
+			
+	}
 	
 	public double getTotalMoneySpent() {
 		return orders.stream()

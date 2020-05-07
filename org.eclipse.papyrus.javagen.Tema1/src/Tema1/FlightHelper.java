@@ -8,7 +8,7 @@ import org.joda.time.DateTime;
 
 public class FlightHelper {
 	
-	public List<Flight> getAvailableFlights() {
+	public static List<Flight> getAvailableFlights() {
 		return Provider.getSingletonInstance().provideFlights().stream()
 				.filter(f -> f.hasValidSchedule())
 				.filter(f -> f.departureDateTime.isBefore(DateTime.now()))
