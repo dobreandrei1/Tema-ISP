@@ -41,6 +41,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xtld0JFAEeqs1d-TKRzTCg" name="login"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_2S7mgHTfEeqkF9IPJMqZ5A" name="PersonalInfo">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_9gdkMHTfEeqkF9IPJMqZ5A" name="lastName">
@@ -363,6 +364,25 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="__vSCcI-JEeqcbthO2bXlfg" name="getSortedFlightsByDate"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="__19SMI-JEeqcbthO2bXlfg" name="getFlightsOnBudget"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_EAtbYI-KEeqcbthO2bXlfg" name="getSearchedFlights"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qJoc0JFDEeqs1d-TKRzTCg" name="AccountDbMock">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CvBeMJFEEeqs1d-TKRzTCg" name="validPersonalInfo" type="_2S7mgHTfEeqkF9IPJMqZ5A"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HEEL0JFEEeqs1d-TKRzTCg" name="invalidPersonalInfo" type="_2S7mgHTfEeqkF9IPJMqZ5A"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tSq04JFEEeqs1d-TKRzTCg" name="account" type="_Dw_jkHTfEeqkF9IPJMqZ5A" aggregation="shared" association="_tSl8YJFEEeqs1d-TKRzTCg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2AtjEJFEEeqs1d-TKRzTCg" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LSzdIJFEEeqs1d-TKRzTCg" name="getSingletonInstance" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSzdIZFEEeqs1d-TKRzTCg" name="AccountDbMock" type="_qJoc0JFDEeqs1d-TKRzTCg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QYWaoJFEEeqs1d-TKRzTCg" name="getMockUserList" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WGwH4JFEEeqs1d-TKRzTCg" type="_Dw_jkHTfEeqkF9IPJMqZ5A"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tSl8YJFEEeqs1d-TKRzTCg" memberEnd="_tSq04JFEEeqs1d-TKRzTCg _tSvtYJFEEeqs1d-TKRzTCg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tSnKgJFEEeqs1d-TKRzTCg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tSnKgZFEEeqs1d-TKRzTCg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_tSvtYJFEEeqs1d-TKRzTCg" name="accountdbmock" type="_qJoc0JFDEeqs1d-TKRzTCg" association="_tSl8YJFEEeqs1d-TKRzTCg"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2qTaIHTeEeqkF9IPJMqZ5A">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2qVPUHTeEeqkF9IPJMqZ5A" source="http://www.eclipse.org/uml2/2.0.0/UML">

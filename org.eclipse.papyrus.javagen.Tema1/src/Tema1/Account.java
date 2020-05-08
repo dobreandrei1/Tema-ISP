@@ -17,10 +17,7 @@ public class Account {
 	
 	public FlightHelper flightHelper;
 	
-	// proprietate hardcodata deoarece colegul meu
-	// se ocupa de partea de logare
 	public boolean isLoggedIn = true;
-	
 	
 	public Account(String username, String password , PersonalInfo personalInfo) {
 		super();
